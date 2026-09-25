@@ -1,186 +1,174 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ধর্মপুর খোদ্রনালী সমাজ কল্যাণ সংস্থা</title>
   <style>
-    :root {
-      --green-900: #1d5c3d;
-      --green-700: #2f6d4d;
-      --green-100: #eaf5ee;
-      --text: #1a1a1a;
-      --muted: #56636b;
-      --white: #ffffff;
-      --line: #dfeadf;
-    }
-
-    * { box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7f4;
-      color: var(--text);
-      line-height: 1.7;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
+      font-family: 'Arial', sans-serif;
+      background: #f4f8f3;
+      color: #1f1f1f;
+      line-height: 1.6;
     }
 
     header {
-      background: linear-gradient(135deg, var(--green-900), var(--green-700));
-      color: var(--white);
+      background: linear-gradient(135deg, #1d5c3d 0%, #2d6a4f 100%);
+      color: white;
       text-align: center;
-      padding: 50px 20px 38px;
+      padding: 50px 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
-    .brand {
-      font-size: clamp(2rem, 4vw, 3.4rem);
-      margin: 0;
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
       font-weight: 700;
-      letter-spacing: 0.02em;
     }
 
     .tagline {
-      margin-top: 10px;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       opacity: 0.95;
     }
 
     nav {
-      background: rgba(24, 61, 45, 0.95);
+      background: #1f4a38;
+      padding: 15px 0;
       text-align: center;
-      padding: 14px 10px;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     nav a {
-      color: var(--white);
-      font-weight: 700;
-      margin: 0 14px;
-      transition: opacity 0.2s ease;
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1rem;
+      display: inline-block;
+      padding: 8px 0;
+      transition: opacity 0.3s;
     }
 
     nav a:hover {
-      opacity: 0.8;
+      opacity: 0.7;
     }
 
     .container {
-      max-width: 1100px;
-      margin: 28px auto;
-      padding: 0 20px 50px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
     .card {
-      background: var(--white);
-      padding: 28px 28px 18px;
-      border-radius: 14px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-      margin-bottom: 24px;
+      background: white;
+      padding: 30px;
+      margin-bottom: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     }
 
     h2 {
-      color: var(--green-900);
-      border-bottom: 2px solid var(--line);
+      color: #1d5c3d;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
       padding-bottom: 10px;
-      margin: 0 0 16px;
-      font-size: clamp(1.6rem, 2vw, 2.2rem);
+      border-bottom: 3px solid #e2efe5;
     }
 
-    p, li {
+    p {
       font-size: 1.05rem;
-      color: var(--text);
+      line-height: 1.8;
+      margin-bottom: 12px;
+      color: #333;
     }
 
     ul {
-      margin: 0;
-      padding-left: 22px;
-      line-height: 1.9;
+      list-style-position: inside;
+      padding-left: 10px;
     }
 
-    .stats {
+    ul li {
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+      color: #333;
+    }
+
+    .highlight {
+      background: #eaf5ee;
+      padding: 15px;
+      border-left: 4px solid #1d5c3d;
+      margin: 15px 0;
+      border-radius: 4px;
+    }
+
+    .contact-info {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
       margin-top: 20px;
     }
 
-    .stat {
-      background: var(--green-100);
-      border-radius: 12px;
-      padding: 20px 16px;
-      text-align: center;
-      border: 1px solid #d7ebdc;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 2rem;
-      color: var(--green-900);
-    }
-
-    .stat span {
-      color: var(--muted);
-      font-weight: 600;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      margin-top: 10px;
-    }
-
     .contact-box {
-      background: #f7faf8;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 18px 16px;
+      background: #f0f5f2;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #dfeadf;
     }
 
-    .contact-box small {
+    .contact-box strong {
+      color: #1d5c3d;
       display: block;
-      color: var(--muted);
       margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 700;
+      font-size: 1.1rem;
     }
 
     footer {
-      background: var(--green-900);
-      color: var(--white);
+      background: #1d5c3d;
+      color: white;
       text-align: center;
-      padding: 24px 16px;
-      font-weight: 600;
+      padding: 30px 20px;
+      margin-top: 50px;
+      font-weight: bold;
     }
 
     @media (max-width: 600px) {
-      nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px 16px;
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      nav a {
+        margin: 0 10px;
+        font-size: 0.9rem;
       }
 
       .card {
-        padding: 22px 18px 16px;
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 1.4rem;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1 class="brand">ধর্মপুর খোদ্রনালী সমাজ কল্যাণ সংস্থা</h1>
+    <h1>ধর্মপুর খোদ্রনালী সমাজ কল্যাণ সংস্থা</h1>
     <p class="tagline">সমাজের কল্যাণে ও মানবিক সেবায় অঙ্গীকার</p>
   </header>
 
@@ -191,67 +179,62 @@
     <a href="#contact">যোগাযোগ</a>
   </nav>
 
-  <main class="container">
+  <div class="container">
     <section id="about" class="card">
       <h2>আমাদের সম্পর্কে</h2>
-      <p>ধর্মপুর খোদ্রনালী সমাজ কল্যাণ সংস্থা একটি সমাজকল্যাণমূলক সংগঠন। আমরা দরিদ্র, প্রান্তিক ও অসহায় মানুষের জীবনমান উন্নয়নে কাজ করি। আমাদের মূল উদ্দেশ্য হলো Social Welfare, Education, Health, and Human Care-এর মাধ্যমে একটি আরও ন্যায্য ও কল্যাণমুখী সমাজ গড়ে তোলা।</p>
-      <p>আমরা শিক্ষা, স্বাস্থ্যসেবা, সামাজিক সহায়তা এবং মানবিক উন্নয়নকে পাশাপাশি এগিয়ে নিয়ে যাওয়ার জন্য নিরলসভাবে কাজ করে চলেছি।</p>
+      <p>ধর্মপুর খোদ্রনালী সমাজ কল্যাণ সংস্থা একটি সমাজকল্যাণমূলক সংগঠন যা দরিদ্র, প্রান্তিক ও অসহায় মানুষের জীবনমান উন্নয়নে নিবেদিত।</p>
+      <p>আমরা শিক্ষা, স্বাস্থ্য, সামাজিক সহায়তা এবং মানবিক সেবার মাধ্যমে একটি স্বচ্ছ, সুন্দর এবং ন্যায়ভিত্তিক সমাজ গড়ে তোলার জন্য প্রতিশ্রুতিবদ্ধ।</p>
+      <div class="highlight">
+        <strong>আমাদের প্রতিশ্রুতি:</strong> প্রতিটি ব্যক্তির মর্যাদা ও কল্যাণ নিশ্চিত করা এবং সমাজে সমতা স্থাপন করা।
+      </div>
     </section>
 
     <section id="mission" class="card">
       <h2>আমাদের লক্ষ্য</h2>
-      <div class="stats">
-        <div class="stat">
-          <strong>১</strong>
-          <span>শিক্ষা সহায়তা</span>
-        </div>
-        <div class="stat">
-          <strong>২</strong>
-          <span>স্বাস্থ্য সচেতনতা</span>
-        </div>
-        <div class="stat">
-          <strong>৩</strong>
-          <span>সমাজকল্যাণ</span>
-        </div>
-        <div class="stat">
-          <strong>৪</strong>
-          <span>মানবিক সহায়তা</span>
-        </div>
-      </div>
+      <ul>
+        <li><strong>শিক্ষা সহায়তা:</strong> প্রান্তিক এলাকার শিশুদের জন্য মানসম্পন্ন শিক্ষা নিশ্চিত করা এবং বৃত্তি প্রদান করা</li>
+        <li><strong>স্বাস্থ্যসেবা:</strong> নিয়মিত স্বাস্থ্য সেবা শিবির আয়োজন এবং স্বাস্থ্য সচেতনতা বৃদ্ধি</li>
+        <li><strong>সামাজিক সহায়তা:</strong> দরিদ্র ও অসহায় পরিবারকে খাদ্য, বস্ত্র এবং অন্যান্য জরুরি সহায়তা প্রদান</li>
+        <li><strong>মানবিক উন্নয়ন:</strong> প্রান্তিক জনগোষ্ঠীর দক্ষতা উন্নয়ন এবং আত্মনির্ভরশীলতা অর্জনে সহায়তা করা</li>
+      </ul>
     </section>
 
     <section id="services" class="card">
-      <h2>আমাদের সেবা</h2>
+      <h2>আমাদের সেবা ও কার্যক্রম</h2>
       <ul>
-        <li>শিক্ষা সহায়তা ও বৃত্তি কার্যক্রম</li>
-        <li>স্বাস্থ্যসেবা ও সচেতনতা সভা</li>
-        <li>দরিদ্র ও অসহায় পরিবারকে সহযোগিতা</li>
-        <li>প্রান্তিক জনগোষ্ঠীর জীবনমান উন্নয়ন</li>
-        <li>সমাজকল্যাণমূলক কর্মসূচি ও জনসচেতনতা</li>
+        <li>শিক্ষার্থীদের জন্য বৃত্তি ও শিক্ষা সহায়তা কর্মসূচি</li>
+        <li>বিনামূল্যে স্বাস্থ্য পরীক্ষা ও চিকিৎসা সেবা</li>
+        <li>দারিদ্র্য বিমোচন কর্মসূচি</li>
+        <li>মহিলা ও যুব ক্ষমতায়ন প্রোগ্রাম</li>
+        <li>কমিউনিটি উন্নয়ন ও সামাজিক সচেতনতা কার্যক্রম</li>
+        <li>দুর্যোগ ব্যবস্থাপনা ও জরুরি সহায়তা</li>
       </ul>
     </section>
 
     <section id="contact" class="card">
-      <h2>যোগাযোগ</h2>
-      <div class="contact-grid">
+      <h2>যোগাযোগ করুন</h2>
+      <p>আমাদের সাথে যুক্ত হতে বা সহায়তা পেতে আমাদের সাথে যোগাযোগ করুন:</p>
+      <div class="contact-info">
         <div class="contact-box">
-          <small>ঠিকানা</small>
-          <div>ধর্মপুর, খোদ্রনালী, বাংলাদেশ</div>
+          <strong>📍 ঠিকানা</strong>
+          ধর্মপুর, খোদ্রনালী<br>
+          বাংলাদেশ
         </div>
         <div class="contact-box">
-          <small>ইমেইল</small>
-          <div>info@dharmapur-khodronali.org</div>
+          <strong>📧 ইমেইল</strong>
+          info@dharmapur-khodronali.org
         </div>
         <div class="contact-box">
-          <small>ফোন</small>
-          <div>+৮৮০ XXX XXX XXX</div>
+          <strong>📞 ফোন</strong>
+          +৮৮০ XXX XXX XXX
         </div>
       </div>
     </section>
-  </main>
+  </div>
 
   <footer>
-    © ২০২৬ ধর্মপুর খোদ্রনালী সমাজ কল্যাণ সংস্থা | সর্বস্বত্ব সংরক্ষিত
+    <p>© ২০২৬ ধর্মপুর খোদ্রনালী সমাজ কল্যাণ সংস্থা | সর্বস্বত্ব সংরক্ষিত</p>
+    <p>আমাদের মিশন: সমাজের প্রতিটি সদস্যের জন্য সমান সুযোগ এবং মর্যাদা নিশ্চিত করা</p>
   </footer>
 </body>
 </html>
