@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ধর্মপুর খোদ্রনালী সমাজ কল্যাণ সংস্থা</title>
+  <style>
+    :root {
+      --green-900: #1d5c3d;
+      --green-700: #2f6d4d;
+      --green-100: #eaf5ee;
+      --text: #1a1a1a;
+      --muted: #56636b;
+      --white: #ffffff;
+      --line: #dfeadf;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7f4;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--green-900), var(--green-700));
+      color: var(--white);
+      text-align: center;
+      padding: 50px 20px 38px;
+    }
+
+    .brand {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .tagline {
+      margin-top: 10px;
+      font-size: 1.15rem;
+      opacity: 0.95;
+    }
+
+    nav {
+      background: rgba(24, 61, 45, 0.95);
+      text-align: center;
+      padding: 14px 10px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: var(--white);
+      font-weight: 700;
+      margin: 0 14px;
+      transition: opacity 0.2s ease;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 28px auto;
+      padding: 0 20px 50px;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 28px 28px 18px;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      color: var(--green-900);
+      border-bottom: 2px solid var(--line);
+      padding-bottom: 10px;
+      margin: 0 0 16px;
+      font-size: clamp(1.6rem, 2vw, 2.2rem);
+    }
+
+    p, li {
+      font-size: 1.05rem;
+      color: var(--text);
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 22px;
+      line-height: 1.9;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .stat {
+      background: var(--green-100);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+      border: 1px solid #d7ebdc;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 2rem;
+      color: var(--green-900);
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .contact-box {
+      background: #f7faf8;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 18px 16px;
+    }
+
+    .contact-box small {
+      display: block;
+      color: var(--muted);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+    }
+
+    footer {
+      background: var(--green-900);
+      color: var(--white);
+      text-align: center;
+      padding: 24px 16px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 16px;
+      }
+
+      .card {
+        padding: 22px 18px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="brand">ধর্মপুর খোদ্রনালী সমাজ কল্যাণ সংস্থা</h1>
+    <p class="tagline">সমাজের কল্যাণে ও মানবিক সেবায় অঙ্গীকার</p>
+  </header>
+
+  <nav>
+    <a href="#about">আমাদের সম্পর্কে</a>
+    <a href="#mission">লক্ষ্য</a>
+    <a href="#services">সেবা</a>
+    <a href="#contact">যোগাযোগ</a>
+  </nav>
+
+  <main class="container">
+    <section id="about" class="card">
+      <h2>আমাদের সম্পর্কে</h2>
+      <p>ধর্মপুর খোদ্রনালী সমাজ কল্যাণ সংস্থা একটি সমাজকল্যাণমূলক সংগঠন। আমরা দরিদ্র, প্রান্তিক ও অসহায় মানুষের জীবনমান উন্নয়নে কাজ করি। আমাদের মূল উদ্দেশ্য হলো Social Welfare, Education, Health, and Human Care-এর মাধ্যমে একটি আরও ন্যায্য ও কল্যাণমুখী সমাজ গড়ে তোলা।</p>
+      <p>আমরা শিক্ষা, স্বাস্থ্যসেবা, সামাজিক সহায়তা এবং মানবিক উন্নয়নকে পাশাপাশি এগিয়ে নিয়ে যাওয়ার জন্য নিরলসভাবে কাজ করে চলেছি।</p>
+    </section>
+
+    <section id="mission" class="card">
+      <h2>আমাদের লক্ষ্য</h2>
+      <div class="stats">
+        <div class="stat">
+          <strong>১</strong>
+          <span>শিক্ষা সহায়তা</span>
+        </div>
+        <div class="stat">
+          <strong>২</strong>
+          <span>স্বাস্থ্য সচেতনতা</span>
+        </div>
+        <div class="stat">
+          <strong>৩</strong>
+          <span>সমাজকল্যাণ</span>
+        </div>
+        <div class="stat">
+          <strong>৪</strong>
+          <span>মানবিক সহায়তা</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="card">
+      <h2>আমাদের সেবা</h2>
+      <ul>
+        <li>শিক্ষা সহায়তা ও বৃত্তি কার্যক্রম</li>
+        <li>স্বাস্থ্যসেবা ও সচেতনতা সভা</li>
+        <li>দরিদ্র ও অসহায় পরিবারকে সহযোগিতা</li>
+        <li>প্রান্তিক জনগোষ্ঠীর জীবনমান উন্নয়ন</li>
+        <li>সমাজকল্যাণমূলক কর্মসূচি ও জনসচেতনতা</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>যোগাযোগ</h2>
+      <div class="contact-grid">
+        <div class="contact-box">
+          <small>ঠিকানা</small>
+          <div>ধর্মপুর, খোদ্রনালী, বাংলাদেশ</div>
+        </div>
+        <div class="contact-box">
+          <small>ইমেইল</small>
+          <div>info@dharmapur-khodronali.org</div>
+        </div>
+        <div class="contact-box">
+          <small>ফোন</small>
+          <div>+৮৮০ XXX XXX XXX</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © ২০২৬ ধর্মপুর খোদ্রনালী সমাজ কল্যাণ সংস্থা | সর্বস্বত্ব সংরক্ষিত
+  </footer>
+</body>
+</html>
